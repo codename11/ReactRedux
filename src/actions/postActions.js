@@ -10,6 +10,8 @@ export const fetchPosts = () => {
         })
         .then((posts) => {
             
+            console.log(posts);
+
             dispatch({
                 type: FETCH_POSTS,
                 payload: posts
