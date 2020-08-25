@@ -38,6 +38,7 @@ class PostForm extends Component {
     }
 
     render() {
+        
         return (
             <div>
                 <h1>Add Post</h1>
@@ -45,14 +46,14 @@ class PostForm extends Component {
                 <form onSubmit={this.onSubmit}>
 
                     <div>
-                        <label>Title</label>
+                        <label>Title</label><br/>
                         <input type="text" name="title" value={this.state.title} onChange={this.onChange}/>
                     </div>
 
                     <br/>
 
                     <div>
-                        <label>Body</label>
+                        <label>Body</label><br/>
                         <textarea name="body" value={this.state.body} onChange={this.onChange}/>
                     </div>
 

@@ -9,7 +9,7 @@ export const fetchPosts = () => {
             return response.json();
         })
         .then((posts) => {
-            
+
             console.log(posts);
 
             dispatch({

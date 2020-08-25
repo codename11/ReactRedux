@@ -35,15 +35,19 @@ class Posts extends Component {
     }
 }
 
+/*Ovde se 'dozvoljava' tj. kaze se sta sve pripada Posts komponenti.*/
 Posts.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
     posts: PropTypes.array.isRequired,
     newPost: PropTypes.object
 };
 
+/*Sada sledi mapiranje dozvoljene komponente koja sadrzi iteme.*/
 const mapStateToProps = (state) => ({
-    posts: state.posts.items,//Ovo su ono 'items' iz reducer-a.
+    posts: state.posts.items,//Ovo su ono 'items' iz reducer-a sa imenom 'post'.
     newPost: state.posts.item
 });
 
+/*Povezi mapStateToProps skupinu itema sa fetchPosts koji ih donosi 
+i to primeni na Posts komponentu.*/
 export default connect(mapStateToProps, { fetchPosts })(Posts);

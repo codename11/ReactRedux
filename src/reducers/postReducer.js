@@ -23,8 +23,9 @@ export default function(state = initialState, action){
                 item: action.payload
             };
             
-            default:
-                return state;
+        default:
+            return state;
+            
       }
 
 } 
